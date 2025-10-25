@@ -16,9 +16,10 @@ app.use(express.json());
 app.use(cookieParser());
 
 const PORT = process.env.PORT
+
 app.use("/api/auth",authRouter);
 
 
 app.listen(PORT,()=>{
-  console.log(`server run in port ${PORT}`)
+  console.log(`server running in  port ${PORT}`)
 })
