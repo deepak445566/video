@@ -12,4 +12,8 @@ authRouter.post("/logout",logout)
 authRouter.post("/onboarding",protectRoute,onboard)
 
 
+authRouter.get("/me",protectRoute,(req,res)=>{
+  res.status(200).json({success:true, user:req.user});
+})
+
 export default authRouter
